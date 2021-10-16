@@ -38,8 +38,7 @@ public class Item {
         this.inStock = newInStock;
     }
     void setSold (int newSold){
-        this.sold = newSold;
-    }
+        this.sold = newSold;}
 
 
 }
