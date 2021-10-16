@@ -5,7 +5,6 @@ public class MenuItem extends Item{
 
     String[] IngredientsUsed;
     double baseCost;
-
     double saleCost;
     double salePriceOff;
     double salePercentage;
