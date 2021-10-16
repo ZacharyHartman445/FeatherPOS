@@ -1,9 +1,11 @@
-import com.example.featherpos.MenuItem;
+package com.example.featherpos;
 
-public class Ingredients extends MenuItem {
+import com.example.featherpos.Item;
+
+public class Ingredients extends Item {
     int Amount;
     //Constructor
-  public  Ingredients(){
+  public Ingredients(){
         Amount = 0;
     }
     //getter functions
