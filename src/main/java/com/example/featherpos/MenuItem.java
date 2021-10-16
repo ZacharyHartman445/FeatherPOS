@@ -4,7 +4,6 @@ package com.example.featherpos;
 public class MenuItem extends Item{
 
     String[] IngredientsUsed;
-    double baseCost;
     double saleCost;
     double salePriceOff;
     double salePercentage;
@@ -13,7 +12,6 @@ public class MenuItem extends Item{
   public MenuItem(){
 
         IngredientsUsed = new String[]{"None"};
-        baseCost = 0;
         saleCost = 0;
         salePriceOff = 0;
         salePercentage = 0;
@@ -29,6 +27,11 @@ public class MenuItem extends Item{
       return this.baseCost;
    }
 
+   double getSaleCost(){return this.saleCost;}
+
+    double getSalePriceOff(){return this.salePriceOff;}
+
+    double getSalePercentage(){return salePercentage;}
 
 
    //setter functions
@@ -39,9 +42,12 @@ public class MenuItem extends Item{
     void setIngredientsUsed(String[] newArray){
        this.IngredientsUsed = newArray;
     }
-
+    void setSaleCost(double newSaleCost){ this.saleCost = this.saleCost;}
+    void setSalePriceOff(double newSalePrice){this.salePriceOff = newSalePrice;}
+    void setSalePercentage(double newPercentage){this.salePercentage = newPercentage;}
 
     //modifying functions
-
+    void calculateSaleCost(){this.saleCost = this.cost - this.salePriceOff;}
+    void calculatePriceOff(){this.salePriceOff= this.cost * this.salePercentage;}
     //database functions
 }
