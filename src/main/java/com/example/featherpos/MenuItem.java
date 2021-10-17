@@ -22,23 +22,14 @@ public class MenuItem extends Item{
    String[] getIngredientsUsed(){
        return this.IngredientsUsed;
    }
-
-   double getBaseCost(){
-      return this.baseCost;
-   }
-
    double getSaleCost(){return this.saleCost;}
-
     double getSalePriceOff(){return this.salePriceOff;}
-
     double getSalePercentage(){return salePercentage;}
 
 
    //setter functions
 
-    void setBaseCost(double currentBase){
-      this.baseCost = currentBase;
-    }
+
     void setIngredientsUsed(String[] newArray){
        this.IngredientsUsed = newArray;
     }
