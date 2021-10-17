@@ -33,7 +33,7 @@ public class MenuItem extends Item{
     void setIngredientsUsed(String[] newArray){
        this.IngredientsUsed = newArray;
     }
-    void setSaleCost(double newSaleCost){ this.saleCost = this.saleCost;}
+    void setSaleCost(double newSaleCost){ this.saleCost = newSaleCost;}
     void setSalePriceOff(double newSalePrice){this.salePriceOff = newSalePrice;}
     void setSalePercentage(double newPercentage){this.salePercentage = newPercentage;}
 
