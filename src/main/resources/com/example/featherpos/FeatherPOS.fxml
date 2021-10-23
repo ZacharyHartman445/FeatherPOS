@@ -111,10 +111,10 @@
                   <Button layoutX="40.0" layoutY="343.0" mnemonicParsing="false" text="Enter" />
                   <BarChart layoutX="40.0" layoutY="22.0" opacity="0.0" prefHeight="276.0" prefWidth="584.0" title="Item Stock">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" label="Item"/>
+                      <CategoryAxis label="Item" side="BOTTOM" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" label="Amount"/>
+                      <NumberAxis label="Amount" side="LEFT" />
                     </yAxis>
                   </BarChart>
                   <ChoiceBox layoutX="131.0" layoutY="346.0" prefWidth="150.0" />
