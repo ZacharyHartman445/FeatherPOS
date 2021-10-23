@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
@@ -13,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="649.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="Business">
       <content>
@@ -80,7 +86,7 @@
                                     <Label text="Discounts" translateX="10.0" GridPane.rowIndex="3" />
                                     <Label text="\$0.00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                     <Label text="Payment" translateX="25.0" GridPane.columnIndex="1" />
-                                    <TextField promptText="\$" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                  </children>
                               </GridPane>
                            </children>
@@ -92,7 +98,27 @@
     </Tab>
     <Tab text="Stats">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <LineChart layoutX="42.0" layoutY="38.0" opacity="0.0" prefHeight="260.0" prefWidth="515.0" title="Profit Chart">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Button layoutX="40.0" layoutY="343.0" mnemonicParsing="false" text="Enter" />
+                  <BarChart layoutX="40.0" layoutY="22.0" opacity="0.0" prefHeight="276.0" prefWidth="584.0" title="Item Stock">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" label="Item"/>
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" label="Amount"/>
+                    </yAxis>
+                  </BarChart>
+                  <ChoiceBox layoutX="131.0" layoutY="346.0" prefWidth="150.0" />
+               </children></AnchorPane>
       </content>
     </Tab>
       <Tab text="Admin">

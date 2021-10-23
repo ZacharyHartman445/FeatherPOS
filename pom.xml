@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.featherpos/com.example.featherpos.HelloApplication</mainClass>
+                            <mainClass>com.example.featherpos/com.example.featherpos.Feather</mainClass>
                         </configuration>
                     </execution>
                 </executions>
