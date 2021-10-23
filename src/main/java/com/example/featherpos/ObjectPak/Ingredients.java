@@ -1,6 +1,4 @@
-package com.example.featherpos;
-
-import com.example.featherpos.Item;
+package com.example.featherpos.ObjectPak;
 
 public class Ingredients extends Item {
     int Amount;

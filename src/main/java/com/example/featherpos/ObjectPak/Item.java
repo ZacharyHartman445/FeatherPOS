@@ -1,4 +1,4 @@
-package com.example.featherpos;
+package com.example.featherpos.ObjectPak;
 
 public class Item {
     String name;

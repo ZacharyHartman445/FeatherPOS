@@ -1,7 +1,9 @@
-package com.example.featherpos;
+package com.example.featherpos.ObjectPak;
 
 
-public class MenuItem extends Item{
+import com.example.featherpos.ObjectPak.Item;
+
+public class MenuItem extends Item {
 
     String[] IngredientsUsed;
     double saleCost;
