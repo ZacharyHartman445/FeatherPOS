@@ -12,7 +12,7 @@ public class Feather extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("FeatherPOS.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Feather (Light Weight Point of Sale)");
         stage.setScene(scene);
         stage.show();
     }
