@@ -5,7 +5,7 @@ public class Item {
     double cost;
     boolean inStock;
     int sold;
-    Item(){
+   public Item(){
         name = "N/A";
         cost = 0;
         inStock = true;
