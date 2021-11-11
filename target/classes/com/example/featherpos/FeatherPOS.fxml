@@ -19,6 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.text.Text?>
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="649.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="Business">
@@ -30,6 +31,9 @@
                         <ScrollPane hbarPolicy="NEVER" prefHeight="370.0" prefWidth="300.0" BorderPane.alignment="CENTER">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="300.0" />
+                              <Text text="Item 1"/>
+                              <Text text="Item 2"/>
+                              <Text text="Item 3"/>
                           </content>
                         </ScrollPane>
                      </center>

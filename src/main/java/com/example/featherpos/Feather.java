@@ -17,6 +17,14 @@ public class Feather extends Application {
         stage.show();
     }
 
+    public void addMenuItem() {
+
+    }
+
+    public void addItem() {
+
+    }
+
     public static void main(String[] args) {
         launch();
     }
