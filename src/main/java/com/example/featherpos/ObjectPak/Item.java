@@ -37,8 +37,7 @@ public class Item {
     void setInStock(boolean newInStock){
         this.inStock = newInStock;
     }
-    void setSold (int newSold){
-        this.sold = newSold;}
+    void setSold (int newSold){this.sold = newSold;}
 
 
 }
