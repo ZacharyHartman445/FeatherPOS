@@ -11,4 +11,8 @@ public class FeatherController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
+    public void getController(){
+
+    }
 }

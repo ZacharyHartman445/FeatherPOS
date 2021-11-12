@@ -5,14 +5,15 @@ import com.example.featherpos.ObjectPak.Item;
 
 public class MenuItem extends Item {
 
+    String name;
     String[] IngredientsUsed;
     double saleCost;
     double salePriceOff;
     double salePercentage;
 
     //Constructor
-  public MenuItem(){
-
+  public MenuItem(String name){
+        this.name = name;
         IngredientsUsed = new String[]{"None"};
         saleCost = 0;
         salePriceOff = 0;
@@ -20,7 +21,7 @@ public class MenuItem extends Item {
    }
 //getter functions
 
-
+    String getName() {return this.name;}
    String[] getIngredientsUsed(){
        return this.IngredientsUsed;
    }
@@ -31,7 +32,7 @@ public class MenuItem extends Item {
 
    //setter functions
 
-
+    void setName(String newName){this.name = newName;}
     void setIngredientsUsed(String[] newArray){
        this.IngredientsUsed = newArray;
     }

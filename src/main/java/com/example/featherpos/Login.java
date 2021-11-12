@@ -17,6 +17,8 @@ public class Login extends Application {
             stage.setTitle("Admin login");
             stage.setScene(scene);
             stage.show();
+
+
         }
         catch (Exception ex ){ex.printStackTrace();}
     }
