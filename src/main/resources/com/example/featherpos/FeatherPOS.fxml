@@ -140,6 +140,8 @@
                      GridPane.columnIndex="0" GridPane.rowIndex="2"/>
                 <PasswordField fx:id="passwordField"
                                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+              <Button text="Login"
+                     GridPane.columnIndex="1" GridPane.rowIndex="3"/>
             </GridPane>
         </content>
       </Tab>

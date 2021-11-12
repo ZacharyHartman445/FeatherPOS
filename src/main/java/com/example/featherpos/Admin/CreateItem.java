@@ -15,6 +15,5 @@ public class CreateItem extends Item {
 
     //show item on  "Business" tab
 
-    //this class would have to be
 
 }
