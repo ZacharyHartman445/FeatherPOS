@@ -20,6 +20,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.PasswordField?>
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="649.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="Business">
@@ -31,9 +33,7 @@
                         <ScrollPane hbarPolicy="NEVER" prefHeight="370.0" prefWidth="300.0" BorderPane.alignment="CENTER">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="300.0" />
-                              <Text text="Item 1"/>
-                              <Text text="Item 2"/>
-                              <Text text="Item 3"/>
+
                           </content>
                         </ScrollPane>
                      </center>
@@ -127,7 +127,24 @@
     </Tab>
       <Tab text="Admin">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <GridPane hgap="10" vgap="10" alignment="center" >
+              <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+                <Text text="Admin Login"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0"
+                    GridPane.columnSpan="2"/>
+
+                <Label text="User Name:"
+                     GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+                <TextField
+                      GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Password:"
+                     GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+                <PasswordField fx:id="passwordField"
+                               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
         </content>
       </Tab>
   </tabs>
