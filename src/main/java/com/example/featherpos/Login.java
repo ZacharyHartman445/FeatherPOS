@@ -12,6 +12,11 @@ public class Login extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
+            //check if user is validated. if so, load FeatherPOS
+
+
+
+
             FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("Login.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 320, 240);
             stage.setTitle("Admin login");
