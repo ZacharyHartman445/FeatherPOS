@@ -9,8 +9,10 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Feather extends Application {
+    public Statement statement;
     @Override
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("FeatherPOS.fxml"));
@@ -32,6 +34,9 @@ public class Feather extends Application {
             //establish a connection
             Connection connection = DriverManager.getConnection
                     ("jdbc:mysql://localhost/FeatherPOS");
+
+            //prep statement
+            statement = connection.createStatement();
         }
         catch (SQLException ex) {ex.printStackTrace();}
     }
