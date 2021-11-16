@@ -6,10 +6,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Feather extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException, ClassNotFoundException {
         FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("FeatherPOS.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 500);
         stage.setTitle("Feather (Light Weight Point of Sale)");
@@ -17,17 +20,23 @@ public class Feather extends Application {
         stage.show();
 
         FeatherController controller = fxmlLoader.getController();
+
+        initializeDB();
     }
 
-    public void addMenuItem() {
+    public void initializeDB() throws ClassNotFoundException {
+        try {
+            //load jdbc driver
+            Class.forName("com.mysql.jdbc.Driver");
 
-    }
-
-    public void addItem() {
-
+            //establish a connection
+            Connection connection = DriverManager.getConnection
+                    ("jdbc:mysql://localhost/FeatherPOS");
+        }
+        catch (SQLException ex) {ex.printStackTrace();}
     }
 
     public static void main(String[] args) {
         launch();
     }
-}
+} //end initializeDB
