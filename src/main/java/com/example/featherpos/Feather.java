@@ -33,7 +33,7 @@ public class Feather extends Application {
 
             //establish a connection
             Connection connection = DriverManager.getConnection
-                    ("jdbc:mysql://localhost/FeatherPOS");
+                    ("jdbc:mysql://http://localhost:8080/phpmyadmin/index.php?route=/database/structure&server=1&db=FeatherPOS");
 
             //prep statement
             statement = connection.createStatement();
