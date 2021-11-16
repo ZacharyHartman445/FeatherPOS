@@ -1,3 +1,5 @@
+<?language javascript?>
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -125,27 +127,43 @@
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab text="Admin">
+      <Tab fx:id="LoginTab" text="Login">
         <content>
           <GridPane alignment="center" hgap="10" vgap="10">
               <padding><Insets bottom="10" left="25" right="25" top="25" /></padding>
-                <Text text="Admin Login" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
-                <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-              <Button onAction="#actionLogin" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Text text="Admin Login" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <Label text="User Name:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="usernameField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label text="Password:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+               <Button fx:id="LoginButton" mnemonicParsing="false" onMouseClicked="LoginCheck()" text="Login" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+               <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" />
+
                <columnConstraints>
+                  <ColumnConstraints />
                   <ColumnConstraints />
                   <ColumnConstraints />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
-                  <RowConstraints />
+                  <RowConstraints maxHeight="192.0" minHeight="19.200004577636733" prefHeight="23.200004577636733" />
+                  <RowConstraints maxHeight="196.79999542236328" minHeight="24.0" prefHeight="39.199986267089855" />
+                  <RowConstraints maxHeight="179.20001373291018" minHeight="27.999969482421903" prefHeight="27.999969482421903" />
+                  <RowConstraints maxHeight="177.60003051757815" minHeight="25.599981689453102" prefHeight="25.599981689453102" />
+                  <RowConstraints maxHeight="152.80001831054688" minHeight="7.20001220703125" prefHeight="13.600000000000023" />
+                  <RowConstraints maxHeight="140.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="166.4" minHeight="25.600000000000023" prefHeight="166.4" />
                </rowConstraints>
             </GridPane>
+        </content>
+          <fx:script>
+             function LoginCheck(){
+
+              }
+          </fx:script>
+      </Tab>
+      <Tab fx:id="AdminTab" text="Admin">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </content>
       </Tab>
   </tabs>
