@@ -15,15 +15,18 @@ public class Feather extends Application {
     public Statement statement;
     @Override
     public void start(Stage stage) throws IOException, ClassNotFoundException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("FeatherPOS.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
-        stage.setTitle("Feather (Light Weight Point of Sale)");
-        stage.setScene(scene);
-        stage.show();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("/com.example.featherpos/FeatherPOS.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setTitle("Feather (Light Weight Point of Sale)");
+            stage.setScene(scene);
+            stage.show();
 
-        FeatherController controller = fxmlLoader.getController();
+            FeatherController controller = fxmlLoader.getController();
 
-        initializeDB();
+            initializeDB();
+        }
+        catch (ClassNotFoundException ex){ex.printStackTrace();}
     }
 
     public void initializeDB() throws ClassNotFoundException {
@@ -33,8 +36,8 @@ public class Feather extends Application {
 
             //establish a connection
             Connection connection = DriverManager.getConnection
-                    ("jdbc:mysql://http://localhost:8080/phpmyadmin/index.php?route=/database/structure&server=1&db=FeatherPOS");
-
+                    //("jdbc:mysql://http://localhost:8080/phpmyadmin/index.php?route=/database/structure&server=1&db=FeatherPOS");
+                ("jdbc:mysql://localhost/FeatherPOS");
             //prep statement
             statement = connection.createStatement();
         }
