@@ -35,11 +35,11 @@ public class Feather extends Application {
     public void initializeDB() throws ClassNotFoundException {
         try {
             //load jdbc driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             //establish a connection
             Connection connection = DriverManager.getConnection
-                ("jdbc:mysql://localhost/FeatherPOS");
+                ("jdbc:mysql://localhost/FeatherPOS", "root", "");
             System.out.println("database connected");
             //prep statement
             statement = connection.createStatement();
