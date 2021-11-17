@@ -16,6 +16,7 @@ public class Feather extends Application {
     @Override
     public void start(Stage stage) throws IOException, ClassNotFoundException {
         try {
+            initializeDB();
             FXMLLoader fxmlLoader = new FXMLLoader(Feather.class.getResource("/com.example.featherpos/FeatherPOS.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 700, 500);
             stage.setTitle("Feather (Light Weight Point of Sale)");
@@ -24,7 +25,7 @@ public class Feather extends Application {
 
             FeatherController controller = fxmlLoader.getController();
 
-            initializeDB();
+
         }
         catch (ClassNotFoundException ex){ex.printStackTrace();}
     }
@@ -32,12 +33,12 @@ public class Feather extends Application {
     public void initializeDB() throws ClassNotFoundException {
         try {
             //load jdbc driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             //establish a connection
             Connection connection = DriverManager.getConnection
-                    //("jdbc:mysql://http://localhost:8080/phpmyadmin/index.php?route=/database/structure&server=1&db=FeatherPOS");
-                ("jdbc:mysql://localhost/FeatherPOS");
+                ("jdbc:mysql://localhost/FeatherPOS", "root", "");
+            System.out.println("database connected");
             //prep statement
             statement = connection.createStatement();
         }
