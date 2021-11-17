@@ -19,7 +19,7 @@ public class Feather extends Application {
     public void start(Stage stage) throws IOException, ClassNotFoundException {
 
             try {
-                //initializeDB();
+                initializeDB();
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource
                         ("/FeatherPOS.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
