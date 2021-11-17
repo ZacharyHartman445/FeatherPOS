@@ -45,9 +45,9 @@ public class Feather extends Application {
             statement = connection.createStatement();
         }
         catch (SQLException ex) {ex.printStackTrace();}
-    }
+    }//end initializeDB
 
     public static void main(String[] args) {
         launch();
     }
-} //end initializeDB
+}
