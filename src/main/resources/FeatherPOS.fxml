@@ -156,7 +156,7 @@
             </GridPane>
         </content>
           <fx:script>
-             function LoginCheck(){
+              function LoginCheck(){
 
               }
           </fx:script>
