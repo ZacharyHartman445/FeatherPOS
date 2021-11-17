@@ -22,21 +22,16 @@ public class Feather extends Application {
                 //initializeDB();
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource
                         ("/FeatherPOS.fxml"));
-                //Parent fxmlLoader = FXMLLoader.load(getClass().getResource
-                //        ("/FeatherPOS.fxml"));
-                //Scene scene = new Scene(fxmlLoader, 700, 500);
                 Scene scene = new Scene(fxmlLoader.load());
                 FeatherController controller = fxmlLoader.getController();
                 stage.setTitle("Feather (Light Weight Point of Sale)");
                 stage.setScene(scene);
                 stage.show();
 
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
 
     public void initializeDB() throws ClassNotFoundException {
         try {
